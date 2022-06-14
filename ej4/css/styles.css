@@ -44,9 +44,9 @@ section {
 }
 
 .search h1 {
-    font-size: 4em;
+    font-size: 3em;
     color: var(--pink);
-    
+    text-align: center;
 }
 
 form {
@@ -57,14 +57,15 @@ form {
 }
 
 .search input {
-    padding: 1em;
+    padding: 0.5em;
     width: 50%;
+    height: 4em;
     border: none;
     border-radius: 1em;
     background-color: transparent;
     box-shadow: 10px 10px 18px -10px var(--black), -10px -10px 18px -10px var(--white);
     color: var(--pink);
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .search input::placeholder {
@@ -72,8 +73,8 @@ form {
 }
 
 .search button {
-    width: 6em;
-    height: 6em;
+    width: 5em;
+    height: 5em;
     margin-left: 2em;
     border: none;
     border-radius: 50%;
@@ -98,21 +99,21 @@ form {
 
 .card-img {
     border-radius: 2em;
-    width: 20em;
-    height: 20em;
+    width: 10em;
+    height: 10em;
     object-fit: cover;
 }
 
 .card h2 {
     color: var(--dark-red);
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 0.5em;
     text-align: center;
 }
 
 .card h3 {
     color: var(--light-gray);
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 .card ul {
@@ -123,19 +124,41 @@ form {
 .card li {
     list-style: none;
     line-height: 1.5em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .card p {
     text-align: center;
     margin-top: 1em;
-    font-size: 2em;
+    font-size: 1.5em;
     color: var(--red);
     font-weight: 600;
 }
 
 .title-default {
     color: var(--dark-red);
-    font-size: 1em;
+    font-size: 0.5em;
     text-align: center;
+}
+
+
+/* Media Querys */
+
+@media only screen and (max-width: 850px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        
+        padding: 2em;
+    }
+
+    .search {
+        border-radius: 5em 5em 0 0;
+        width: 80%;
+    }
+
+    .card {
+        border-radius: 0 0 5em 5em;
+        width: 80%;
+    }
 }
